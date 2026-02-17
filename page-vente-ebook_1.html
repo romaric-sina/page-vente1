@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Jours Pour Lancer Votre Business En Ligne - Sans Investissement</title>
+    <meta name="description" content="Transformez votre expertise en revenus dès demain. Guide complet pour lancer votre business en ligne en 7 jours, sans investissement.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FF4D00;
+            --primary-dark: #D63E00;
+            --accent: #FFD700;
+            --dark: #0A0E27;
+            --dark-secondary: #1A1F3A;
+            --light: #F8F9FA;
+            --success: #00D68F;
+            --text: #2D3748;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
+            color: white;
+            padding: 60px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,77,0,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255,77,0,0.2);
+            border: 2px solid var(--primary);
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            animation: slideDown 0.8s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 6vw, 58px);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .subtitle {
+            font-size: clamp(18px, 3vw, 24px);
+            margin-bottom: 35px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 40px rgba(255,77,0,0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(255,77,0,0.5);
+        }
+        
+        .cta-primary span {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .price-tag {
+            margin-top: 25px;
+            font-size: 16px;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+        
+        .price-tag .old-price {
+            text-decoration: line-through;
+            opacity: 0.6;
+            margin-right: 10px;
+        }
+        
+        .price-tag .new-price {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--accent);
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .stats {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .stat {
+            animation: countUp 2s ease-out;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text);
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, white 0%, #FFF5F0 100%);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark);
+        }
+        
+        .problem-list {
+            display: grid;
+            gap: 25px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            background: white;
+            padding: 25px;
+            border-left: 5px solid var(--primary);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            animation: slideInLeft 0.6s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .problem-item::before {
+            content: '❌';
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 80px 20px;
+            background: var(--dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .solution::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(255,77,0,0.1) 100%);
+            transform: skewX(-15deg);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .benefit-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 35px 25px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.08);
+            border-color: var(--primary);
+        }
+        
+        .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .benefit-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+        
+        .benefit-text {
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+        
+        /* Contents Section */
+        .contents {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .days-grid {
+            display: grid;
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .day-card {
+            background: linear-gradient(135deg, #FFF5F0 0%, white 100%);
+            border: 2px solid #FFE5D9;
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .day-card:hover {
+            border-color: var(--primary);
+            transform: translateX(10px);
+        }
+        
+        .day-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .day-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 900;
+            color: var(--primary);
+            opacity: 0.15;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        
+        .day-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+            position: relative;
+        }
+        
+        .day-description {
+            color: var(--text);
+            line-height: 1.7;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #FFF5F0 0%, white 100%);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .quote-icon {
+            font-size: 48px;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .author-result {
+            font-size: 14px;
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        /* Guarantee */
+        .guarantee {
+            padding: 60px 20px;
+            background: var(--dark-secondary);
+            color: white;
+            text-align: center;
+        }
+        
+        .guarantee-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--success);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .guarantee-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .guarantee-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: var(--success);
+        }
+        
+        /* Urgency */
+        .urgency {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .urgency-box {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .countdown {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin: 30px 0;
+            color: var(--accent);
+        }
+        
+        .urgency-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 20px;
+            background: white;
+            text-align: center;
+        }
+        
+        .price-box {
+            max-width: 600px;
+            margin: 40px auto;
+            background: linear-gradient(135deg, #FFF5F0 0%, white 100%);
+            border: 3px solid var(--primary);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .price-breakdown {
+            margin: 30px 0;
+        }
+        
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .price-item:last-child {
+            border-bottom: none;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            padding-top: 20px;
+        }
+        
+        .bonus-list {
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .bonus-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .bonus-item::before {
+            content: '✅';
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 20px;
+            background: #F8F9FA;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #FFF5F0;
+            color: var(--primary);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 25px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-toggle {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.7;
+        }
+        
+        /* Floating CTA Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 40px rgba(255,77,0,0.4);
+            z-index: 1000;
+            animation: bounce 2s infinite;
+            display: none;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating-cta.visible {
+            display: block;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px 60px;
+            }
+            
+            .cta-primary {
+                width: 100%;
+                max-width: 350px;
+                padding: 18px 40px;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .floating-cta {
+                left: 20px;
+                right: 20px;
+                text-align: center;
+            }
+            
+            .price-box {
+                padding: 25px;
+            }
+        }
+        
+        /* Animations on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🚀 Guide Complet 2026</div>
+            <h1>
+                Lancez Votre <span>Business En Ligne</span><br>
+                En 7 Jours Sans Investissement
+            </h1>
+            <p class="subtitle">
+                Le plan d'action étape par étape pour transformer votre expertise en revenus dès demain, même si vous partez de zéro
+            </p>
+            <a href="https://kaderdigi.mychariow.shop/prd_2jhpdl/checkout" class="cta-primary" target="_blank">
+                <span>🔥 ACHETER MAINTENANT</span>
+            </a>
+            <div class="price-tag">
+                <span class="old-price">10 000 FCFA</span>
+                <span class="new-price">4 000 FCFA</span>
+                <div style="margin-top: 10px; font-size: 14px; opacity: 0.8;">
+                    ⚡ Offre de lancement limitée
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="stats">
+            <div class="stat fade-in">
+                <div class="stat-number">1,247+</div>
+                <div class="stat-label">Entrepreneurs lancés</div>
+            </div>
+            <div class="stat fade-in">
+                <div class="stat-number">97%</div>
+                <div class="stat-label">Taux de satisfaction</div>
+            </div>
+            <div class="stat fade-in">
+                <div class="stat-number">7 Jours</div>
+                <div class="stat-label">Pour voir des résultats</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">Vous en Avez Marre de...</h2>
+            <div class="problem-list fade-in">
+                <div class="problem-item">
+                    <strong>Travailler dur sans jamais avoir assez d'argent</strong> pour réaliser vos rêves et prendre soin de votre famille
+                </div>
+                <div class="problem-item">
+                    <strong>Dépendre d'un salaire qui ne suffit pas</strong> ou d'un patron qui ne reconnaît pas votre valeur
+                </div>
+                <div class="problem-item">
+                    <strong>Voir passer les opportunités</strong> parce que vous pensez qu'il faut beaucoup d'argent pour démarrer
+                </div>
+                <div class="problem-item">
+                    <strong>Avoir des idées de business</strong> mais ne jamais savoir par où commencer concrètement
+                </div>
+                <div class="problem-item">
+                    <strong>Regarder les autres réussir en ligne</strong> pendant que vous restez bloqué au même point
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">
+                Et Si Dans 7 Jours Vous Aviez Votre Propre Source de Revenus ?
+            </h2>
+            <p style="text-align: center; font-size: 20px; max-width: 800px; margin: 0 auto 20px; opacity: 0.9;">
+                Sans site web coûteux, sans stock, sans bureau, sans employés...<br>
+                <strong style="color: var(--accent);">Juste vous, votre téléphone, et ce guide</strong>
+            </p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <span class="benefit-icon">💰</span>
+                    <h3 class="benefit-title">100% Sans Investissement</h3>
+                    <p class="benefit-text">
+                        Tous les outils et stratégies sont GRATUITS. Vous commencez avec ce que vous avez déjà : votre téléphone et vos compétences.
+                    </p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <span class="benefit-icon">⚡</span>
+                    <h3 class="benefit-title">Résultats Dès 48h</h3>
+                    <p class="benefit-text">
+                        Pas de théorie sans fin. Le guide vous fait passer à l'action immédiatement et décrocher vos premières ventes dès le 4ème jour.
+                    </p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <span class="benefit-icon">📱</span>
+                    <h3 class="benefit-title">100% Mobile</h3>
+                    <p class="benefit-text">
+                        Tout peut se faire depuis votre smartphone. WhatsApp Business, Mobile Money, réseaux sociaux... C'est tout ce dont vous avez besoin.
+                    </p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <span class="benefit-icon">🎯</span>
+                    <h3 class="benefit-title">Adapté à Votre Réalité</h3>
+                    <p class="benefit-text">
+                        Conçu pour le contexte africain et francophone. Outils disponibles, paiements Mobile Money, stratégies qui marchent vraiment ici.
+                    </p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <span class="benefit-icon">📈</span>
+                    <h3 class="benefit-title">Plan de Croissance Inclus</h3>
+                    <p class="benefit-text">
+                        De 0 à 500 000 FCFA/mois en quelques semaines. Chaque étape est expliquée pour scaler votre business progressivement.
+                    </p>
+                </div>
+                
+                <div class="benefit-card fade-in">
+                    <span class="benefit-icon">✅</span>
+                    <h3 class="benefit-title">Méthode Testée et Prouvée</h3>
+                    <p class="benefit-text">
+                        Plus de 1 200 entrepreneurs ont déjà utilisé ces stratégies pour lancer leur business avec succès. Maintenant c'est votre tour.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contents -->
+    <section class="contents">
+        <div class="container">
+            <h2 class="section-title">Ce Que Vous Allez Découvrir</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; font-size: 18px;">
+                Un plan d'action jour par jour, clair et précis, pour passer de <strong>zéro à vos premières ventes</strong>
+            </p>
+            
+            <div class="days-grid">
+                <div class="day-card fade-in">
+                    <span class="day-number">01</span>
+                    <h3 class="day-title">Identifier Votre Compétence Rentable</h3>
+                    <p class="day-description">
+                        La méthode des 3 cercles pour découvrir la compétence que vous allez monétiser en 48h + Les 10 niches les plus rentables en 2026 + Comment définir votre client idéal qui a de l'argent
+                    </p>
+                </div>
+                
+                <div class="day-card fade-in">
+                    <span class="day-number">02</span>
+                    <h3 class="day-title">Créer Votre Offre Irrésistible</h3>
+                    <p class="day-description">
+                        La formule exacte d'une offre qui se vend + Les 3 niveaux de prix qui maximisent vos revenus + Le script de vente en 5 lignes qui convertit + Les bonus gratuits qui font la différence
+                    </p>
+                </div>
+                
+                <div class="day-card fade-in">
+                    <span class="day-number">03</span>
+                    <h3 class="day-title">Construire Votre Vitrine Professionnelle</h3>
+                    <p class="day-description">
+                        WhatsApp Business : votre boutique mobile en 15 min + Créer votre identité visuelle sur Canva (gratuit) + Sur quels réseaux être présent (et lesquels éviter) + Votre premier contenu qui attire les clients
+                    </p>
+                </div>
+                
+                <div class="day-card fade-in">
+                    <span class="day-number">04</span>
+                    <h3 class="day-title">Trouver Vos 10 Premiers Clients Payants</h3>
+                    <p class="day-description">
+                        La méthode des cercles concentriques qui marche à tous les coups + Le script de message privé qui convertit + L'offre gratuite qui attire puis vend + Plan d'action : 10 clients en 48h
+                    </p>
+                </div>
+                
+                <div class="day-card fade-in">
+                    <span class="day-number">05</span>
+                    <h3 class="day-title">Automatiser Vos Ventes</h3>
+                    <p class="day-description">
+                        Votre tunnel de vente automatisé (simple) + Créer votre page de vente gratuite + Le système de suivi qui vend pendant que vous dormez + Templates et métriques à suivre
+                    </p>
+                </div>
+                
+                <div class="day-card fade-in">
+                    <span class="day-number">06</span>
+                    <h3 class="day-title">Encaisser Vos Paiements Facilement</h3>
+                    <p class="day-description">
+                        Configuration Mobile Money Pro en 10 min + Processus de paiement sécurisé anti-arnaque + Gérer les impayés comme un pro + Comptabilité simple sur Google Sheets
+                    </p>
+                </div>
+                
+                <div class="day-card fade-in">
+                    <span class="day-number">07</span>
+                    <h3 class="day-title">Multiplier Vos Revenus Par 5</h3>
+                    <p class="day-description">
+                        Les 5 leviers de croissance + Créer des offres récurrentes (revenus garantis) + Le système de parrainage qui explose + Plan de croissance : 0 à 500 000 FCFA/mois
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Ils L'Ont Fait, Vous Pouvez Le Faire Aussi</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "J'étais au chômage depuis 8 mois. En suivant ce guide, j'ai gagné mes premiers 35 000 FCFA en 5 jours avec la création de CV. Aujourd'hui je fais 180 000 FCFA/mois et je forme d'autres personnes !"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <div class="author-name">Aminata M.</div>
+                            <div class="author-result">✅ 180 000 FCFA/mois</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "Je pensais qu'il fallait un gros capital pour démarrer. Ce guide m'a ouvert les yeux ! J'ai commencé avec 0 FCFA, juste mon téléphone. Premier mois : 95 000 FCFA. Deuxième mois : 240 000 FCFA !"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">KD</div>
+                        <div class="author-info">
+                            <div class="author-name">Kofi D.</div>
+                            <div class="author-result">✅ 240 000 FCFA/mois</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "Incroyable ! J'ai suivi le guide à la lettre et j'ai vendu ma première formation en ligne pour 8 000 FCFA le 6ème jour. Maintenant j'ai 23 clients réguliers. Merci pour ce trésor !"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">FN</div>
+                        <div class="author-info">
+                            <div class="author-name">Fatou N.</div>
+                            <div class="author-result">✅ 23 clients réguliers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Urgency -->
+    <section class="urgency">
+        <div class="container">
+            <div class="urgency-box fade-in">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 20px;">
+                    ⚠️ Attention : Offre Limitée
+                </h2>
+                <p class="urgency-text">
+                    Le prix va augmenter à <strong>10 000 FCFA</strong> dans :
+                </p>
+                <div class="countdown" id="countdown">
+                    23:45:12
+                </div>
+                <p style="font-size: 16px; opacity: 0.9;">
+                    Après ça, le prix DOUBLE. Ne laissez pas passer cette chance de changer votre vie pour seulement 4 000 FCFA.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="acheter">
+        <div class="container">
+            <h2 class="section-title">Commencez Votre Transformation Maintenant</h2>
+            
+            <div class="price-box fade-in">
+                <h3 style="font-size: 28px; margin-bottom: 25px; color: var(--dark);">
+                    🎁 Ce Que Vous Recevez Aujourd'hui
+                </h3>
+                
+                <div class="bonus-list">
+                    <div class="bonus-item">
+                        <div><strong>Le guide complet "7 Jours Pour Lancer Votre Business"</strong> (37 pages d'actions concrètes)</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div><strong>Templates prêts à l'emploi</strong> : Messages de vente, factures, scripts de prospection</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div><strong>Liste de 50+ outils gratuits</strong> testés et recommandés</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div><strong>Plan de croissance détaillé</strong> : 0 à 500 000 FCFA/mois</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div><strong>Checklists d'actions quotidiennes</strong> pour ne jamais être perdu</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div><strong>Accès à vie et mises à jour gratuites</strong></div>
+                    </div>
+                </div>
+                
+                <div class="price-breakdown">
+                    <div class="price-item">
+                        <span>Valeur réelle du contenu</span>
+                        <span>50 000 FCFA</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Prix normal</span>
+                        <span style="text-decoration: line-through; opacity: 0.6;">10 000 FCFA</span>
+                    </div>
+                    <div class="price-item">
+                        <span>VOTRE PRIX AUJOURD'HUI</span>
+                        <span>4 000 FCFA</span>
+                    </div>
+                </div>
+                
+                <a href="https://kaderdigi.mychariow.shop/prd_2jhpdl/checkout" class="cta-primary" style="margin-top: 30px;" target="_blank">
+                    <span>💳 ACHETER MAINTENANT - 4 000 FCFA</span>
+                </a>
+                
+                <p style="margin-top: 20px; font-size: 14px; opacity: 0.7;">
+                    🔒 Paiement 100% sécurisé via Chariow<br>
+                    📥 Accès immédiat après paiement
+                </p>
+            </div>
+            
+            <p style="margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 18px; line-height: 1.8;">
+                <strong>Pensez-y :</strong> 4 000 FCFA, c'est le prix de 2 repas au restaurant. Mais ce guide peut vous rapporter <strong>des centaines de milliers de francs</strong> dans les prochains mois. Est-ce que ça vaut le coup ?
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Est-ce que ça marche vraiment sans investissement ?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>OUI ! Tous les outils mentionnés dans le guide sont 100% gratuits : WhatsApp Business, Canva, Google Sheets, réseaux sociaux, etc. Vous avez juste besoin de votre téléphone et d'une connexion internet. Des milliers de personnes ont déjà lancé leur business avec 0 FCFA de capital.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Je n'ai aucune compétence particulière, ça va marcher pour moi ?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le guide vous aide à identifier les compétences que VOUS avez déjà (même si vous ne les voyez pas). Vous savez cuisiner ? Écrire ? Utiliser les réseaux sociaux ? Donner des conseils ? C'est suffisant ! Le Jour 1 est dédié à découvrir ce que vous pouvez monétiser immédiatement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Combien de temps par jour dois-je y consacrer ?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Comptez 2-3 heures par jour pendant les 7 premiers jours. C'est un investissement en temps, mais imaginez : 2-3 heures par jour pendant 1 semaine pour créer une source de revenus qui peut durer des années. Ça vaut le coup, non ?</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Comment je reçois le guide après paiement ?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Dès que votre paiement est confirmé sur Chariow, vous recevez automatiquement le guide complet en PDF. C'est immédiat ! Vous pouvez commencer dans les 5 minutes qui suivent votre achat. Pour toute question, contactez-moi sur WhatsApp : <strong>+226 73 28 24 82</strong></p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Et si je ne gagne rien après 7 jours ?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Si vous suivez le guide à la lettre pendant 7 jours et que vous ne gagnez pas au moins 25 000 FCFA, je vous rembourse intégralement. Aucune question posée. Vous ne prenez AUCUN risque. C'est ma garantie personnelle.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Est-ce que ça marche dans mon pays ?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ce guide a été conçu spécialement pour l'Afrique francophone. Que vous soyez au Bénin, Burkina Faso, Cameroun, Côte d'Ivoire, Mali, Sénégal, Togo, RDC, etc. - les stratégies fonctionnent car elles sont adaptées à votre réalité : Mobile Money, WhatsApp, contexte local, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Tous droits réservés</p>
+            <p style="margin-top: 15px;">
+                Commandez maintenant : <a href="https://kaderdigi.mychariow.shop/prd_2jhpdl/checkout" style="color: var(--primary);" target="_blank">Cliquez ici</a>
+            </p>
+            <p style="margin-top: 12px;">
+                📱 Une question ? Contactez-moi sur WhatsApp :
+                <a href="https://wa.me/22673282482" style="color: #25D366; font-weight: 700;" target="_blank">+226 73 28 24 82</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <a href="https://kaderdigi.mychariow.shop/prd_2jhpdl/checkout" class="floating-cta" id="floatingCta" target="_blank">
+        Acheter Maintenant 🚀
+    </a>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const wasActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Open clicked item if it wasn't active
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
+            
+            const diff = midnight - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Floating CTA on scroll
+        window.addEventListener('scroll', () => {
+            const floatingCta = document.getElementById('floatingCta');
+            if (window.scrollY > 800) {
+                floatingCta.classList.add('visible');
+            } else {
+                floatingCta.classList.remove('visible');
+            }
+        });
+
+        // Fade in on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
